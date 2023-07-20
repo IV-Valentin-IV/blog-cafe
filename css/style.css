@@ -1,0 +1,197 @@
+:root{
+    --fuente_parrafos: 'Open Sans', sans-serif;
+    --fuente_heading:  'PT Sans', sans-serif;
+
+    --primario: #784D3C;
+    --blanco:#ffffff;
+    --negro:hsl(0, 0%, 0%);
+    --gris: #e1e1e1;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;/* 1rem = 10px*/
+}
+*,*:before,*:after{
+    box-sizing:inherit ;
+}
+body{
+    font-family: var(--fuente_parrafos);
+    font-size: 1.6rem ;
+    line-height: 2;
+}
+/*globales*/
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuente_heading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem ;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+    border-radius: 1rem;
+}
+/*utilidades*/
+.no_margin{
+   margin: 0; 
+}
+.no_padding{
+    padding: 0;
+}
+.centrar_texto{
+    text-align: center;
+}
+/*header*/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*una imagen se posiciona vertical y horizontal
+    por eso doble center en la posicion del imagen*/
+}
+.header__texto{
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top:15rem;
+    }
+}
+.barra{
+    padding-top: 2rem;
+}
+@media (min-width: 768px) {
+    .barra{
+        display:flex ;
+        justify-content: space-between;
+        /*el justify-content:space-between es para
+         separar el logo y la barra de navegacion*/
+        align-items: center;
+        /*align-items: center; es para alinear el logo y 
+        la barra de navegacion*/
+        padding-top: 4rem;
+    }
+}
+.logo{
+    color: var(--blanco);
+}
+.logo__nombre{
+    font-weight:400  ;
+}
+.logo__bold{
+    font-weight: 700;
+}
+/*navegacion*/
+@media (min-width: 768px) {
+    .navegacion__enlace{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+/*contenido principal y aside*/
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.entrada{
+    border-bottom: 0.2rem solid var(--gris);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.boton{
+    display: block;
+    font-family: var(--fuente_heading);
+    color: var(--blanco);
+    padding: 1rem 3rem ;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+        
+    }
+}
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+.cursos{
+    list-style:none;
+}
+.widget-curso{
+    border-bottom: 0.2rem solid var(--gris);
+    border-left: 0.2rem solid var(--gris);
+    padding-left: 1rem;
+}
+
+.widget-curso__label{
+    font-size: var(--fuente_heading);
+    font-weight: 700;
+}
+.widget-curso__info{
+    font-weight: 400;
+    font-family: var(--fuente_parrafos);
+}
+.widget-curso__info,
+.widget-curso__label{
+    font-size: 2rem;
+}
+.footer{
+    margin-top: 4rem;
+    
+    background-color: var(--negro);
+    padding: 2.5rem 1rem;
+}
+.footer__texto{
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--fuente_heading)
+}
